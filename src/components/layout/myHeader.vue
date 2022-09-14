@@ -1,13 +1,9 @@
 <template>
-
-<header class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
-  <div class="container-fluid shadow-sm p-3 mb-5 bg-white">
-    <router-link class ="navbar-brand mx-auto" to="/">
-      <h1>btcbydata</h1>
-    </router-link>
-  </div>
-</header>
-
+  <header class="navbar sticky-top navbar-expand-lg navigation-clean">
+        <h1>
+          <router-link class="title-link" to="/">btcbydata</router-link>
+        </h1>
+  </header>
 </template>
 
 <script>
@@ -17,5 +13,24 @@
 </script>
 
 <style scoped>
+
+.navbar {
+  background:white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  z-index: 999;
+  top: -10px;
+  width:100%;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 0 5px 5px -5px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
 
 </style>
