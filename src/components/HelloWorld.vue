@@ -6,15 +6,15 @@
           <tr>
             <th>COIN</th>
             <th>TICKER</th>
-            <th>PRICE($)</th>
-            <th>CHANGE IN 24</th>
+            <th>PRICE</th>
+            <th>CHANGE IN 24hours</th>
           </tr>
         </thead>
-        <tbody v-for="(item, index) in 15" :key="index">
+        <tbody v-for="(item, index) in 20" :key="index">
           <td> {{items.data[index].name}}</td>
           <td> {{items.data[index].symbol}} </td>
-          <td> {{items.data[index].priceUsd}} </td>
-          <td> {{items.data[index].changePercent24Hr}}</td>
+          <td> ${{items.data[index].priceUsd}} </td>
+          <td> {{items.data[index].changePercent24Hr}}%</td>
         </tbody>
       </table>
     </div>
@@ -44,7 +44,6 @@ export default {
 <style scoped>
 main{
 	margin: 0 auto;
-	border-bottom: 1px solid #000000;
 	padding: 40px 0 20px 0; /* top right bottom left */
 
 }
