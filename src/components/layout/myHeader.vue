@@ -1,9 +1,17 @@
 <template>
-  <header class="navbar sticky-top navbar-expand-lg navigation-clean">
-        <h1>
-          <router-link class="title-link" to="/">btcbydata</router-link>
-        </h1>
-  </header>
+  <div class="wrapper">
+    <header class="navbar sticky-top navbar-expand-lg navigation-clean">
+      <h1>
+        <a href="#">btcbydata</a>
+      </h1>
+    <nav>
+      <ul class="navbar-nav mr-auto text-center">
+        <li><a href="https://github.com/btcbydata" target='_blank'><i class="fa-brands fa-github fa-2x"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-circle-info fa-2x"></i></a></li>
+      </ul>
+    </nav>
+    </header>
+  </div>
 </template>
 
 <script>
@@ -13,6 +21,17 @@
 </script>
 
 <style scoped>
+
+h1 {
+  float:left;
+}
+
+.wrapper {
+  margin : 0 auto;
+}
+.navbar-nav a{
+  padding:0 3px;
+}
 
 .navbar {
   background:white;
@@ -32,6 +51,10 @@
 a {
   text-decoration: none;
   color: #000000;
+}
+
+a:hover {
+  color:black
 }
 
 </style>

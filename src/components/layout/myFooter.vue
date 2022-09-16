@@ -23,6 +23,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: monospace;
 }
 div {
   text-align: center;
