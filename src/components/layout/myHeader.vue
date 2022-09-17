@@ -1,17 +1,15 @@
 <template>
-  <div class="wrapper">
     <header class="navbar sticky-top navbar-expand-lg navigation-clean">
       <h1>
-        <a href="#">btcbydata</a>
+        <router-link to="/"><a>btcbydata</a></router-link>
       </h1>
     <nav>
-      <ul class="navbar-nav mr-auto text-center">
+      <ul class="navbar-nav text-center">
         <li><a href="https://github.com/btcbydata" target='_blank'><i class="fa-brands fa-github fa-2x"></i></a></li>
-        <li><a href=""><i class="fa-solid fa-circle-info fa-2x"></i></a></li>
+        <li><a><router-link to="/whatisbtcbd"><i class="fa-solid fa-circle-info fa-2x"></i></router-link></a></li>
       </ul>
     </nav>
     </header>
-  </div>
 </template>
 
 <script>
@@ -21,10 +19,6 @@
 </script>
 
 <style scoped>
-
-h1 {
-  float:left;
-}
 
 .wrapper {
   margin : 0 auto;
@@ -45,7 +39,6 @@ h1 {
   height:100px;
   margin-left: 0;
   margin-right: 0;
-  box-shadow: 0 5px 5px -5px;
 }
 
 a {

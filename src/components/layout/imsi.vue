@@ -33,7 +33,7 @@ export default {
   name: "helloWorld",
   data () {
     return {
-      items: null
+      items: []
     }
   },
   mounted() {
@@ -41,11 +41,10 @@ export default {
         this.items = res.data;
     })
   },
-  watch : {
-    'items.data' : {
-      handler : function() {
-        console.log('items changed')
-      }
+  methods : {
+    reRender() {
+      this.$forceUpdate();
+      console.log("ok")
     }
   }
 }
