@@ -3,7 +3,7 @@
     <div class="bttn">
     <a class="rel" onClick="window.location.reload()"><i class="fa-solid fa-rotate-right fa-3x"></i></a>
     </div>
-    <div class="container">
+    <div id="wrapper">
       <table class="table">
         <thead>
             <th>COIN</th>
@@ -67,7 +67,9 @@ main{
   color:black;
 }
 
-
+div#wrapper{
+  overflow-x: auto;
+}
 .bttn {
   text-align:center;
   padding : 10px;
@@ -75,7 +77,7 @@ main{
 
 table {
   table-layout: fixed;
-  width: 60%;
+  width: 700px;
   border-collapse: collapse;
   border: 3px solid black;
   margin-left:auto;
