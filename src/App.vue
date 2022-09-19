@@ -3,13 +3,12 @@
 </template>
 
 <script>
-
+import Chart from 'chart.js'
 export default {
   name: 'App',
-mounted() {
-  console.log(this.$firebase)
-}};
+}
 </script>
 
 <style>
+
 </style>

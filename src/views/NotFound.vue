@@ -23,7 +23,11 @@ export default {
 <style scoped>
 
 .errmessage {
-
+ height:400px;
+ width:100%;
+ text-align:center;
+ font-size:30pt;
+ margin-top: 190px;
 }
 
 h1{

@@ -3,7 +3,8 @@ import App from './App.vue'
 import axios from 'axios'
 import router from './router'
 import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
-import '@/plugins/firebase'
+import '@/plugins/firebase.js'
+import { getDatabase, ref, child, push, update } from "firebase/database";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
