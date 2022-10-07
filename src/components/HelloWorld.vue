@@ -38,6 +38,7 @@
     <div class="charter">
       <img src="../assets/antindex.png"> </img>
     </div>
+    <LineChart></LineChart>
 
   </main>
 </template>
