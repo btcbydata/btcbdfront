@@ -2,6 +2,7 @@
   <main>
     <div v-if="loading" class="bttn">
     <a class="rel" onClick="window.location.reload()"><i class="fa-solid fa-rotate-right fa-3x"></i></a>
+    <span>click to reload chart</span>
     </div>
     <div id="wrapper">
       <table class="table">
@@ -21,14 +22,25 @@
         </tbody>
       </table>
     </div>
+  </p>
 
-    <div class="date_container">
-      <span class="explain02"><router-link to="/aboutrecsystem">BERT 감정분석 기반 추천</router-link></span>
-      <span class="dater">: {{this.$store.state.coins[0].date}} 기준 </span>
+  <div class="charttitle">
+      <span>TERM FREQUENCY 기반 이달의 암호화폐</span>
+      <span class="dater">: {{this.$store.state.coins[20].date}} 기준 </span>
     </div>
     <div class="container">
       <span class="coiner">
-        {{this.$store.state.coins[0].coinnames}}
+        {{this.$store.state.coins[20].coinnames}}
+      </span>
+    </div>
+
+    <div class="date_container">
+      <span class="explain02"><router-link to="/aboutrecsystem">BERT 감정분석 기반 추천</router-link></span>
+      <span class="dater">: {{this.$store.state.coins[20].date}} 기준 </span>
+    </div>
+    <div class="container">
+      <span class="coiner">
+        maintaing
       </span>
     </div>
 
@@ -36,7 +48,7 @@
       <span>개미지수</span>
     </div>
     <div class="charter">
-      restoring...
+      restoring... (chart library not working)
     </div>
 
   </main>
@@ -89,7 +101,7 @@ main{
   text-align: center;
 }
 .charttitle{
-  padding-top:20px;
+  padding-top:50px;
   text-align: center;
   color:rgb(53, 152, 219);
   font-weight:bold;
