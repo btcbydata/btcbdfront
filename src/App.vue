@@ -3,9 +3,13 @@
 </template>
 
 <script>
-import Chart from 'chart.js'
+import "@/plugins/echarts";
+
 export default {
   name: 'App',
+  data() {
+    return {}
+  }
 }
 </script>
 
