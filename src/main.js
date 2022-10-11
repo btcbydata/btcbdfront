@@ -6,7 +6,6 @@ import store from '@/store/store.js'
 import '@/plugins/firebase.js'
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import { getDatabase, ref, child, push, update } from "firebase/database";
-import * as echarts from 'echarts/dist/echarts.esm';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'

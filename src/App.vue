@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import "@/plugins/echarts";
 
 export default {
   name: 'App',
