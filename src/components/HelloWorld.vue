@@ -12,12 +12,12 @@
             <th>PRICE</th>
             <th>CHANGE IN 24hours</th>
         </thead>
-        <tbody v-for="(item, index) in 20" :key="items.data[index].priceUsd">
-          <tr id="chart">
-            <td> {{items.data[index].name}}</td>
-            <td> {{items.data[index].symbol}} </td>
-            <td> ${{parseFloat(items.data[index].priceUsd).toFixed(4)}} </td>
-            <td> {{parseFloat(items.data[index].changePercent24Hr).toFixed(3)}}%</td>
+        <tbody v-for="(item, index) in filteredItems">
+          <tr id="chart" :key="item.id">
+            <td> {{item.name}}</td>
+            <td> {{item.symbol}} </td>
+            <td> ${{parseFloat(item.priceUsd).toFixed(6)}} </td>
+            <td> {{parseFloat(item.changePercent24Hr).toFixed(5)}}%</td>
           </tr>
         </tbody>
       </table>
@@ -84,19 +84,25 @@ export default {
   data () {
     return {
       items: [],
-      loading : false
     }
   },
-  mounted() {
-    this.loading=true;
-
-    getCoinList()
-      .then(res => {
-      this.items = res.data;
-      console.log(this.items.data[0].priceUsd) // firebase connect check
-    });
-
-    this.timer = setInterval("this.getCoinList()", 60000);
+  computed: {
+    filteredItems: function () {
+      if(this.items.data) {
+        return this.items.data.slice(0,20)
+      } else {
+        return []
+      }
+    }
+  },
+  created() {
+    this.timer = setInterval(()=>
+      getCoinList()
+        .then(res => {
+        this.items = res.data;
+        console.log(this.items.data[0].priceUsd)
+      })
+    , 10000);
   }
 }
 </script>

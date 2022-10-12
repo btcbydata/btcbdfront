@@ -1,14 +1,9 @@
 var axios = require('axios');
 
+const instance = axios.create({
+  baseURL: 'https://api.coincap.io/v2',
+});
 
-var config = {
-  method: 'get',
-  url: 'https://api.coincap.io/v2/assets',
-  headers: {}
-};
-
-function getCoinList() {
-  return axios(config)
+export function getCoinList() {
+  return instance.get('/assets')
 }
-
-export { getCoinList };
