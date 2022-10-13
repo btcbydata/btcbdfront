@@ -51,7 +51,7 @@
     </div>
     <div class="charter">
       <span class="explain03">2020년 1월~2021년 9월의 월별 글 갯수 비율을 차트로 표시합니다. 가장 많았을 때의 기준이 1로, 수치가 1에 가까울수록 개인들의 암호화폐 관심도가 높습니다.</span><br/><br/>
-      <img src = "@/assets/antindex.png" />
+        <LineChart></LineChart>
     </div>
 
     <div class="charttitle">
@@ -77,10 +77,14 @@
 <script>
 import { getDatabase, ref, child, push, update } from "firebase/database";
 import '@/plugins/firebase';
-import { getCoinList } from '@/api/index.js'
+import { getCoinList } from '@/api/index.js';
+import LineChart from '@/components/Line.vue'; // chart.js 라이브러리 임포트
 
 export default {
   name: "helloWorld",
+  components : {
+    LineChart
+  },
   data () {
     return {
       items: [],
