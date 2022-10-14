@@ -85,9 +85,14 @@
           ],
           datasets: [
             {
-              label: 'Data One',
+              label: '2021',
               backgroundColor: '#f87979',
-              data: [40, 39, 10, 40, 39, 80, 40]
+              data: [1,0.9,0.8,0.6,1,0.5,0.7]
+            },
+            {
+              label: '2022',
+              backgroundColor: '#f41010',
+              data: [1,0.2,0.6,0.3,0.2,0.3,0.74]
             }
           ]
         },

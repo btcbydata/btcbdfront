@@ -49,7 +49,7 @@
     <div class="charttitle">
       <span>개미지수</span>
     </div>
-    <div class="charter">
+    <div class="charter_ant">
       <span class="explain03">2020년 1월~2021년 9월의 월별 글 갯수 비율을 차트로 표시합니다. 가장 많았을 때의 기준이 1로, 수치가 1에 가까울수록 개인들의 암호화폐 관심도가 높습니다.</span><br/><br/>
         <LineChart></LineChart>
     </div>
@@ -57,16 +57,16 @@
     <div class="charttitle">
       <span>호황 지수</span>
     </div>
-    <div class="charter">
+    <div class="charter_hot">
       <span class="explain03">2020년 1월~2021년 9월의 월별 글들을 자연어처리로 긍/부정을 판별해 차트로 표시합니다. 긍정 비율이 높을수록 호황으로 파악합니다.</span><br/><br/>
-      <img src = "@/assets/sentex.png" />
+
     </div>
 
     <div class="charttitle">
       <span>지난 주의 커뮤니티 워드클라우드</span><br/>
       <span class="explain03">NLP 모델 등을 사용하는 다른 부분들은 db에 자동 업데이트 시키기 어렵다고 생각하지만 이 부분은 상용 라이브러리도 많고 상대적으로 구현하기 쉽다고 생각해 크롤링-db저장-분석-웹에 띄우기까지 클라우드로 구현할 수 있다면 구현하고자 합니다. </span><br/><br/>
     </div>
-    <div class="charter">
+    <div class="charter_wordcloud">
       <img src = "@/assets/wordcloudex.jpg"/>
     </div>
     <br/><br/>
@@ -125,9 +125,22 @@ main{
   border:3px solid black;
   font-weight: bold;
 }
-.charter{
+.charter_ant{
   padding-top:0px;
   text-align: center;
+  margin:auto;
+  height:500px;
+  width:1000px;
+}
+.charter_hot{
+  padding-top:0px;
+  text-align: center;
+  margin:auto;
+}
+.charter_wordcloud{
+  padding-top:0px;
+  text-align: center;
+  margin:auto;
 }
 .charttitle{
   padding-top:50px;
