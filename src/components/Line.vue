@@ -81,24 +81,44 @@
             'April',
             'May',
             'June',
-            'July'
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
           ],
           datasets: [
             {
               label: '2021',
-              backgroundColor: '#f87979',
-              data: [1,0.9,0.8,0.6,1,0.5,0.7]
+              data: [0.214, 0.488, 0.745, 1.0, 0.816, 0.285, 0.163, 0.321, 0.307, 0.249, 0.31, 0.258],
+              borderColor: 'red',
+              lineTension: 0.3
             },
             {
               label: '2022',
-              backgroundColor: '#f41010',
-              data: [1,0.2,0.6,0.3,0.2,0.3,0.74]
+              data: [0.185, 0.122, 0.104, 0.096, 0.165, 0.111, 0.072, 0.059, 0.025],
+              borderColor: 'blue',
+              lineTension: 0.3
+
             }
           ]
         },
         chartOptions: {
           responsive: true,
-          maintainAspectRatio: false
+          maintainAspectRatio: false,
+          scales: {
+          xAxes: [{
+              gridLines: {
+                  display:false
+              }
+          }],
+          yAxes: [{
+              gridLines: {
+                  display:false
+              }
+          }]
+    }
         }
       }
     }
