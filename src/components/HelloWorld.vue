@@ -79,11 +79,13 @@ import { getDatabase, ref, child, push, update } from "firebase/database";
 import '@/plugins/firebase';
 import { getCoinList } from '@/api/index.js';
 import LineChart from '@/components/Line.vue'; // chart.js 라이브러리 임포트
+import VueWordCloud from 'vuewordcloud'; // vuewordcloud 라이브러리 임포트
 
 export default {
   name: "helloWorld",
   components : {
-    LineChart
+    LineChart,
+    [VueWordCloud.name]: VueWordCloud
   },
   data () {
     return {
