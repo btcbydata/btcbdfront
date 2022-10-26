@@ -2,7 +2,6 @@
   <main>
     <div v-if="loading" class="bttn">
     <a class="rel" onClick="window.location.reload()"><i class="fa-solid fa-rotate-right fa-3x"></i></a>
-    <span>동적인 요소가 작동하지 않아 아래 이미지들은 전부 예시입니다. (표는 리로드시 작동)</span>
     </div>
     <div id="wrapper">
       <table class="table">
@@ -75,8 +74,6 @@
 </template>
 
 <script>
-import { getDatabase, ref, child, push, update } from "firebase/database";
-import '@/plugins/firebase';
 import { getCoinList } from '@/api/index.js';
 import LineChart from '@/components/Line.vue'; // chart.js 라이브러리 임포트
 import VueWordCloud from 'vuewordcloud'; // vuewordcloud 라이브러리 임포트
@@ -102,13 +99,19 @@ export default {
     }
   },
   created() {
+
+    getCoinList().then(res=>{
+      this.items=res.data;
+    }
+    )
+
     this.timer = setInterval(()=>
       getCoinList()
         .then(res => {
         this.items = res.data;
         console.log(this.items.data[0].priceUsd)
       })
-    , 10000);
+    ,10000)
   }
 }
 </script>
