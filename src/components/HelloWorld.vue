@@ -26,7 +26,7 @@
   <div class="date_container">
       <span>TERM FREQUENCY 기반 이달의 암호화폐</span>
       <span class="dater">: {{this.$store.state.coins[20].date}} 기준 </span></br>
-      <span class="explain03">명사 빈도수에 기반해 커뮤니티에서 가장 언급이 많이 나온 3가지 종류의 암호화폐를 선정합니다.</span><br/><br/>
+      <span class="explain03">명사 빈도수에 기반해 커뮤니티에서 가장 언급이 많이 나온 암호화폐 파이 차트를 보여줍니다.</span><br/><br/>
     </div>
     <div class="container">
       <span class="coiner">
@@ -35,9 +35,9 @@
     </div>
 
     <div class="date_container">
-      <span class="explain02"><router-link to="/aboutrecsystem">BERT 감정분석 기반 추천</router-link></span>
+      <span class="explain02"><router-link to="/aboutrecsystem">ELECTRA 감정분석 기반 추천</router-link></span>
       <span class="dater">: {{this.$store.state.coins[20].date}} 기준 </span></br>
-      <span class="explain03">지난 달의 게시글들 중에, 암호화폐 관련 것들만 추리고, 감성분석을 실시하여, 긍정의 비율이 높은 3가지 종류의 암호화폐를 추천합니다.</span><br/><br/>
+      <span class="explain03">2020년 1월~2022년 9월 글에 감성분석을 실시하여, 긍정의 비율이 높은 암호화폐를 추천합니다.</span><br/><br/>
     </div>
     <div class="container">
       <span class="coiner">
@@ -49,7 +49,7 @@
       <span>개미지수</span>
     </div>
     <div class="charter_ant">
-      <span class="explain03">2020년 1월~2021년 9월의 월별 글 갯수 비율을 차트로 표시합니다. 가장 많았을 때의 기준이 1로, 수치가 1에 가까울수록 개인들의 암호화폐 관심도가 높습니다.</span><br/><br/>
+      <span class="explain03">2020년 1월~2022년 9월의 월별 글 갯수 비율을 차트로 표시합니다. 가장 많았을 때의 기준이 1로, 수치가 1에 가까울수록 개인들의 암호화폐 관심도가 높습니다.</span><br/><br/>
         <LineChart></LineChart>
     </div>
 
@@ -57,13 +57,13 @@
       <span>호황 지수</span>
     </div>
     <div class="charter_hot">
-      <span class="explain03">2020년 1월~2021년 9월의 월별 글들을 자연어처리로 긍/부정을 판별해 차트로 표시합니다. 긍정 비율이 높을수록 호황으로 파악합니다.</span><br/><br/>
+      <span class="explain03">2020년 1월~2022년 9월의 월별 글들을 자연어처리로 긍/부정을 판별해 차트로 표시합니다. 긍정 비율이 높을수록 호황으로 파악합니다.</span><br/><br/>
 
     </div>
 
     <div class="charttitle">
-      <span>지난 주의 커뮤니티 워드클라우드</span><br/>
-      <span class="explain03">NLP 모델 등을 사용하는 다른 부분들은 db에 자동 업데이트 시키기 어렵다고 생각하지만 이 부분은 상용 라이브러리도 많고 상대적으로 구현하기 쉽다고 생각해 크롤링-db저장-분석-웹에 띄우기까지 클라우드로 구현할 수 있다면 구현하고자 합니다. </span><br/><br/>
+      <span>커뮤니티 워드클라우드</span><br/>
+      <span class="explain03"></span><br/><br/>
     </div>
     <div class="charter_wordcloud">
       <img src = "@/assets/wordcloudex.jpg"/>
