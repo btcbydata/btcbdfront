@@ -30,7 +30,7 @@
     </div>
     <div class="container">
       <span class="coiner">
-        {{this.$store.state.coins[20].coinnames}}
+        <PieChart></PieChart>
       </span>
     </div>
 
@@ -76,12 +76,14 @@
 <script>
 import { getCoinList } from '@/api/index.js';
 import LineChart from '@/components/Line.vue'; // chart.js 라이브러리 임포트
+import PieChart from '@/components/Pie.vue';
 import VueWordCloud from 'vuewordcloud'; // vuewordcloud 라이브러리 임포트
 
 export default {
   name: "helloWorld",
   components : {
     LineChart,
+    PieChart,
     [VueWordCloud.name]: VueWordCloud
   },
   data () {
