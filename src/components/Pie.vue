@@ -64,11 +64,11 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['BITCOIN', 'LUNA', 'TETHER', 'CHAINLINK','MOVIEBLOCK', 'RANDOM', 'RANDOM2'],
+        labels: ['BITCOIN', 'LUNA', 'ARGO', 'WAVE','RAVN', 'GOLEM', 'ETHERIUM'],
         datasets: [
           {
             backgroundColor: ['#50D0D0', '#BE1E3E', '#7967C3', '#FFC639', '#A6CEB6', '#D75BEC', '#E5461C'],
-            data: [100, 80, 48, 24, 11, 8, 6]
+            data: [3460, 1099, 883, 677, 662, 540, 442]
           }
         ]
       },
