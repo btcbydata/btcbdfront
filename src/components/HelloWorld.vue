@@ -58,12 +58,12 @@
     </div>
     <div class="charter_hot">
       <span class="explain03">2020년 1월~2022년 9월의 월별 글들을 자연어처리로 긍/부정을 판별해 차트로 표시합니다. 긍정 비율이 높을수록 호황으로 파악합니다.</span><br/><br/>
-
+        <LineChart2></LineChart2>
     </div>
 
     <div class="charttitle">
       <span>커뮤니티 워드클라우드</span><br/>
-      <span class="explain03"></span><br/><br/>
+      <span class="explain03"></span>
     </div>
     <div class="charter_wordcloud">
       <img src = "@/assets/wordcloudex.jpg"/>
@@ -76,6 +76,7 @@
 <script>
 import { getCoinList } from '@/api/index.js';
 import LineChart from '@/components/Line.vue'; // chart.js 라이브러리 임포트
+import LineChart2 from '@/components/Line2.vue';
 import PieChart from '@/components/Pie.vue';
 import VueWordCloud from 'vuewordcloud'; // vuewordcloud 라이브러리 임포트
 
@@ -84,6 +85,7 @@ export default {
   components : {
     LineChart,
     PieChart,
+    LineChart2,
     [VueWordCloud.name]: VueWordCloud
   },
   data () {
@@ -143,6 +145,8 @@ main{
   padding-top:0px;
   text-align: center;
   margin:auto;
+  height:500px;
+  width:1000px;
 }
 .charter_wordcloud{
   padding-top:0px;
