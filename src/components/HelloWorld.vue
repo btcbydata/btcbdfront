@@ -24,37 +24,36 @@
   </p>
 
   <div class="date_container">
-      <span>TERM FREQUENCY 기반 이달의 암호화폐    </span>
-      <select name="count" data-title="MONTH">
-        <option value="0">MONTH</option>
-        <option value="1">2022/10</option>
-        <option value="2">2022/09</option>
-        <option value="3">2022/08</option>
-        <option value="4">2022/07</option>
-        <option value="5">2022/06</option>
-        <option value="6">2022/05</option>
-        <option value="7">2022/04</option>
-        <option value="8">2022/03</option>
-        <option value="9">2022/02</option>
-        <option value="10">2022/01</option>
-        <option value="11">2021/12</option>
-        <option value="12">2021/11</option>
-        <option value="13">2021/10</option>
-        <option value="14">2021/09</option>
-        <option value="15">2021/08</option>
-        <option value="16">2021/07</option>
-        <option value="17">2021/06</option>
-        <option value="18">2021/05</option>
-        <option value="19">2021/04</option>
-        <option value="20">2021/03</option>
-        <option value="21">2021/02</option>
-        <option value="22">2021/01</option>
+      <span>TERM FREQUENCY 기반 이달의 암호화폐   </span>
+      <select name="count" data-title="MONTH" v-model="selectPieChartDate">
+        <option value="202210">2022/10</option>
+        <option value="202209">2022/09</option>
+        <option value="202208">2022/08</option>
+        <option value="202207">2022/07</option>
+        <option value="202206">2022/06</option>
+        <option value="202205">2022/05</option>
+        <option value="202204">2022/04</option>
+        <option value="202203">2022/03</option>
+        <option value="202202">2022/02</option>
+        <option value="202201">2022/01</option>
+        <option value="202112">2021/12</option>
+        <option value="202111">2021/11</option>
+        <option value="202110">2021/10</option>
+        <option value="202109">2021/09</option>
+        <option value="202108">2021/08</option>
+        <option value="202107">2021/07</option>
+        <option value="202106">2021/06</option>
+        <option value="202105">2021/05</option>
+        <option value="202104">2021/04</option>
+        <option value="202103">2021/03</option>
+        <option value="202102">2021/02</option>
+        <option value="202101">2021/01</option>
       </select><br></br>
       <span class="explain03">명사 빈도수에 기반해 커뮤니티에서 가장 언급이 많이 나온 암호화폐 파이 차트를 보여줍니다.</span><br/><br/>
     </div>
     <div class="container">
       <span class="coiner">
-        <PieChart></PieChart>
+        <PieChart :select-date="selectPieChartDate"></PieChart>
       </span>
     </div>
 
@@ -112,9 +111,10 @@ export default {
     LineChart2,
     [VueWordCloud.name]: VueWordCloud
   },
-  data () {
+  data() {
     return {
       items: [],
+      selectPieChartDate: '202210'
     }
   },
   computed: {
