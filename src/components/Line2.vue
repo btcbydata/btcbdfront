@@ -93,48 +93,54 @@ export default {
         datasets: [
           {
             label: '2020',
-            borderColor: '#FC2525',
-            pointBackgroundColor: 'white',
+            borderColor: '#f34e6c',
             borderWidth: 1,
-            radius: 0,
             fill: true,
-            pointBorderColor: 'white',
             backgroundColor: (ctx) => {
               const canvas = ctx.chart.ctx;
               const gradient = canvas.createLinearGradient(0,0,0,450);
 
-              gradient.addColorStop(0, 'rgba(255, 0,0, 0.5)');
-              gradient.addColorStop(.5, 'rgba(255, 0, 0, 0.25)');
-              gradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+              gradient.addColorStop(0, 'rgba(243, 78, 108, 0.4)');
+              gradient.addColorStop(.5, 'rgba(243, 78, 108, 0.2)');
+              gradient.addColorStop(1, 'rgba(243, 78, 108, 0)');
 
               return gradient;
             },
-            data: [40, 39, 10, 40, 39, 80, 40,30,80,15,66,57]
+            data: [0.446,0.394,0.390,0.403,0.397,0.397,0.407,0.393,0.419,0.422,0.366,0.377]
           },
           {
             label: '2021',
             fill:true,
-            borderColor: '#05CBE1',
-            pointBackgroundColor: 'white',
-            pointBorderColor: 'white',
+            borderColor: '#fec20a',
             borderWidth: 1,
             backgroundColor: (ctx) => {
               const canvas = ctx.chart.ctx;
-              const gradient = canvas.createLinearGradient(0,0,0,160);
+              const gradient = canvas.createLinearGradient(0,0,0,450);
 
-              gradient.addColorStop(0, 'rgba(0, 231, 255, 0.9)');
-              gradient.addColorStop(.5, 'rgba(0, 231, 255, 0.25)');
-              gradient.addColorStop(1, 'rgba(0, 231, 255, 0)');
+              gradient.addColorStop(0, 'rgba(254, 194, 10, 0.9)');
+              gradient.addColorStop(.5, 'rgba(254, 194, 10, 0.25)');
+              gradient.addColorStop(1, 'rgba(254, 194, 10, 0)');
 
               return gradient;
             },
-            data: [40, 39, 10, 40, 39, 80, 40]
+            data: [0.369,0.37,0.386,0.369,0.369,0.360,0.371,0.381,0.375,0.371,0.381,0.361]
           },
           {
-            label: '2022',
+            label: '2021',
             fill:true,
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            data: [10, 22, 33, 44, 55, 66, 77]
+            borderColor: '#8dbafe',
+            borderWidth: 1,
+            backgroundColor: (ctx) => {
+              const canvas = ctx.chart.ctx;
+              const gradient = canvas.createLinearGradient(0,0,0,450);
+
+              gradient.addColorStop(0, 'rgba(141, 186, 254, 0.9)');
+              gradient.addColorStop(.5, 'rgba(141, 186, 254, 0.25)');
+              gradient.addColorStop(1, 'rgba(141, 186, 254, 0)');
+
+              return gradient;
+            },
+            data: [0.356,0.365,0.376,0.358,0.360,0.362,0.367,0.372,0.386,0.361]
           },
         ]
       },
