@@ -23,6 +23,28 @@
     </div>
   </p>
 
+  <div class="charttitle">
+      <span>호황 지수</span>
+    </div>
+    <div class="charter_hot">
+      <a href="https://colab.research.google.com/drive/16Xhgg1sFX1A8dDU4gUOsvwRxzRmTm577?usp=sharing" target='_blank'>code by colab</a>
+        <LineChart2></LineChart2>
+    </div>
+
+    <div class="date_container">
+      <span class="explain02"><router-link to="/aboutrecsystem">ELECTRA 감정분석 기반 추천   </router-link></span>
+      <select name="count2" data-title="MONTH2" v-model="selectBarChartDate">
+        <option value="202210">2022/10</option>
+        <option value="202209">2022/09</option>
+        <option value="202208">2022/08</option>
+      </select><br></br>
+    </div>
+    <div class="container">
+      <span class="coiner">
+        <BarChart :select-date="selectBarChartDate"></BarChart>
+      </span>
+    </div>
+
   <div class="date_container">
       <span>TERM FREQUENCY 기반 이달의 암호화폐   </span>
       <select name="count" data-title="MONTH" v-model="selectPieChartDate">
@@ -48,8 +70,19 @@
         <option value="202103">2021/03</option>
         <option value="202102">2021/02</option>
         <option value="202101">2021/01</option>
+        <option value="202012">2020/12</option>
+        <option value="202011">2020/11</option>
+        <option value="202010">2020/10</option>
+        <option value="202009">2020/09</option>
+        <option value="202008">2020/08</option>
+        <option value="202007">2020/07</option>
+        <option value="202006">2020/06</option>
+        <option value="202005">2020/05</option>
+        <option value="202004">2020/04</option>
+        <option value="202003">2020/03</option>
+        <option value="202002">2020/02</option>
+        <option value="202001">2020/01</option>
       </select><br></br>
-      <span class="explain03">명사 빈도수에 기반해 커뮤니티에서 가장 언급이 많이 나온 암호화폐 파이 차트를 보여줍니다.</span><br/><br/>
     </div>
     <div class="container">
       <span class="coiner">
@@ -57,31 +90,11 @@
       </span>
     </div>
 
-    <div class="date_container">
-      <span class="explain02"><router-link to="/aboutrecsystem">ELECTRA 감정분석 기반 추천</router-link></span>
-      <span class="dater">: {{this.$store.state.coins[20].date}} 기준 </span></br>
-      <span class="explain03">2020년 1월~2022년 9월 글에 감성분석을 실시하여, 긍정의 비율이 높은 암호화폐를 추천합니다.</span><br/><br/>
-    </div>
-    <div class="container">
-      <span class="coiner">
-        BITCOIN TETHER EITHERIUM
-      </span>
-    </div>
-
     <div class="charttitle">
       <span>개미지수</span>
     </div>
     <div class="charter_ant">
-      <span class="explain03">2020년 1월~2022년 9월의 월별 글 갯수 비율을 차트로 표시합니다. 가장 많았을 때의 기준이 1로, 수치가 1에 가까울수록 개인들의 암호화폐 관심도가 높습니다.</span><br/><br/>
         <LineChart></LineChart>
-    </div>
-
-    <div class="charttitle">
-      <span>호황 지수</span>
-    </div>
-    <div class="charter_hot">
-      <span class="explain03">2020년 1월~2022년 9월의 월별 글들을 자연어처리로 긍/부정을 판별해 차트로 표시합니다. 긍정 비율이 높을수록 호황으로 파악합니다.</span><br/><br/>
-        <LineChart2></LineChart2>
     </div>
 
     <div class="charttitle">
@@ -89,7 +102,15 @@
       <span class="explain03"></span>
     </div>
     <div class="charter_wordcloud">
-      <img src = "@/assets/wordcloudex.jpg"/>
+      <vue-word-cloud
+      style="
+        height: 500px;
+        width: 1000px;
+      "
+      :words="[['비트', 3159], ['코인', 2705], ['토스', 2183], ['앱', 2164],['오늘',1816],['위믹스',1540],['숏',1367],['리플',1330],['지금',1291],['도지',1208],['간다',1144],['아파트',1085],['롱',1076],['개',1070],['진짜',1068],['왜',125],['업비트',986],['스테픈',816],['뭐',799],['개추',740],['돈',690],['좀',661],['매수',558],['이유',557],['말',555],['내',553],['사람',549],['때',547],['나',542],['이제',529],['알트',527],['빗썸',490],['세력',489],['또',485],['상장',469]]"
+      :color="([, weight]) => weight > 2000 ? 'DeepPink' : weight > 1000 ? 'GreenYellow' : weight > 700 ? 'DArkOrange' : weight > 600 ? 'RosyBrown' : weight > 500 ? 'RoyalBlue' : 'Indigo'"
+      font-family="Roboto"
+      />
     </div>
     <br/><br/>
 
@@ -100,6 +121,7 @@
 import { getCoinList } from '@/api/index.js';
 import LineChart from '@/components/Line.vue'; // chart.js 라이브러리 임포트
 import LineChart2 from '@/components/Line2.vue';
+import BarChart from '@/components/Bar.vue'
 import PieChart from '@/components/Pie.vue';
 import VueWordCloud from 'vuewordcloud'; // vuewordcloud 라이브러리 임포트
 
@@ -109,12 +131,14 @@ export default {
     LineChart,
     PieChart,
     LineChart2,
+    BarChart,
     [VueWordCloud.name]: VueWordCloud
   },
   data() {
     return {
       items: [],
-      selectPieChartDate: '202210'
+      selectPieChartDate: '202210',
+      selectBarChartDate: '202210'
     }
   },
   computed: {
@@ -154,7 +178,7 @@ main{
   font-size:20pt;
   padding-top:10px;
   padding-bottom:10px;
-  width:1000px;
+  width:500px;
   border:3px solid black;
   font-weight: bold;
 }
@@ -176,6 +200,8 @@ main{
   padding-top:0px;
   text-align: center;
   margin:auto;
+  height:500px;
+  width:1000px;
 }
 .charttitle{
   padding-top:50px;
