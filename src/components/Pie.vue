@@ -71,32 +71,36 @@ export default {
           data: [3677, 1540, 1330, 1208, 816, 446, 394]
         },
         "202208": {
-          labels: ['BITCOIN', 'TETHER', 'ETERIUM', 'BANCA', 'LUNA'],
-          data: [198, 19, 13, 13, 8]
+          labels: ['BITCOIN', 'ETHERIUM', 'WAVE', 'FLOW', 'ANKER','EOS','WEMIX'],
+          data: [5401, 2407, 2096, 1813,1328, 1290,939]
         },
         "202207": {
-          labels: ['BITCOIN', 'TOPGUN', 'TAVE', 'BANCA', 'ETHERIUM', 'TETHER'],
-          data: [242, 30, 19, 18, 14, 13]
+          labels: ['BITCOIN', 'ETHERIUM', 'WAVE', 'SOLVE', 'POLYGON', 'MOVIEBLOC','REI'],
+          data: [7150, 3797, 1618, 1417, 872, 869, 802]
         },
         "202206": {
-          labels: ['BITCOIN', 'LUNA', 'DOGE', 'AIDA', 'SOLANA', 'TRON', 'TETHER'],
-          data: [276, 58, 30, 29, 28, 26, 26]
+          labels: ['BITCOIN','WAVE','ETHERIUM','LUNA','WEMIX','DOGE','METAL'],
+          data: [11872, 7723, 5031, 2392, 1573, 1343, 1287]
         },
         "202205": {
-          labels: ['BITCOIN', 'TETHER', 'ANKER', 'WEMIX', 'BANCA', 'UST', 'STEPHN'],
-          data: [591, 152, 59, 49, 44, 43, 28]
+          labels: ['LUNA','BITCOIN','WAVE','ETHERIUM','WEMIX','TRON','DOGE'],
+          data: [50753,15602,5809,3849,2452,1248,1038]
         },
         "202204": {
-          labels: ['BITCOIN', 'STEPHN', 'TETHER', 'WAVE', 'LUNA', 'BANCA', 'DOGE'],
-          data: [304, 87, 32, 29, 28, 26, 23]
+          labels: ['ZILLICA','BITCOIN','METAL','WAVE','DOGE','STEEM','RIPPLE'],
+          data: [8141, 7429, 5031,4605,4399,2817,1469]
         },
         "202203": {
-          labels: ['BITCOIN', 'WEMIX', 'RIPPLE', 'ZENCOIN', 'LUNA', 'BORA', 'BANCA'],
-          data: [388, 31, 28, 24, 22, 21, 17]
+          labels: ['WAVE','ZILLICA','BITCOIN', 'MOVIEBLOC', 'RIPPLE', 'OGN', 'PUNDX'],
+          data: [9035,7986,7860, 3545, 1431, 1125, 1069]
         },
         "202202": {
-          labels: ['BITCOIN', 'WEMIX', 'RIPPLE', 'LUNA', 'BORA', 'BANCA', 'ANKER'],
-          data: [348, 31, 28, 22, 21, 17, 16]
+          labels: ['BITCOIN', 'WEMIX', 'BORA', 'RIPPLE', 'HUNT', 'STRK', 'JST'],
+          data: [9333, 4310, 3219, 2806, 1616, 1559, 1519]
+        },
+        "202201": {
+          labels: ['BITCOIN', 'WEMIX', 'ETHERIUM', 'PUNDX', 'DOGE', 'COSMOS', 'BORA'],
+          data: [17712, 11208, 4795, 3894, 3718, 2031, 2021]
         },
         "202112": {
           labels: ['BOBA', 'ETHERIUM', 'BORA', 'WEMIX', 'BITCOIN', 'BANCA', 'RIPPLE'],
@@ -107,8 +111,8 @@ export default {
           data: [820,212,137,126,120,97,75]
         },
         "202110": {
-          labels: ['BITCOIN', 'WEMIX', 'RIPPLE', 'LUNA', 'BORA', 'BANCA', 'ANKER'],
-          data: [ ]
+          labels: ['BITCOIN','ETHERIUM','SOLANA','FLOW','DOGE','POLYGON','NUCYPHER'],
+          data: [820,212,137,126,120,97,75 ]
         },
         "202109": {
           labels: ['BITCOIN', 'BITCOIN CASH ABC', 'ETHERIUM', 'SOLANA', 'EDCHAIN', 'RIPPLE', 'ELF'],
@@ -128,7 +132,7 @@ export default {
         },
         "202105": {
           labels: ['BITCOIN', 'WEMIX', 'RIPPLE', 'LUNA', 'BORA', 'BANCA', 'ANKER'],
-          data: [ ]
+          data: [348, 31, 28, 22, 21, 17, 16 ]
         },
         "202104": {
           labels: ['BITCOIN', 'WEMIX', 'RIPPLE', 'LUNA', 'BORA', 'BANCA', 'ANKER'],
@@ -143,8 +147,8 @@ export default {
           data: [14856,10091,8159,7163,5903,3424,2668]
         },
         "202101": {
-          labels: ['BITCOIN', 'WEMIX', 'RIPPLE', 'LUNA', 'BORA', 'BANCA', 'ANKER'],
-          data: [348, 31, 28, 22, 21, 17, 16]
+          labels: ['BITCOIN','RIPPLE', 'STELLAR', 'POLKADOT', 'EOS', 'FUNDX', 'HEDERA'],
+          data: [ 19999, 15287,9752, 7483, 5312, 4778, 4224]
         },
         "202012": {
           labels: ['RIPPLE','BITCOIN','REFEREUM','AMBLE','ETERIUM','STEEM DOLLAR','OBSERVER'],

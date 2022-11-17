@@ -126,7 +126,7 @@ export default {
             data: [0.369,0.37,0.386,0.369,0.369,0.360,0.371,0.381,0.375,0.371,0.381,0.361]
           },
           {
-            label: '2021',
+            label: '2022',
             fill:true,
             borderColor: '#8dbafe',
             borderWidth: 1,

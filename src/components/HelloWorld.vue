@@ -163,7 +163,7 @@ export default {
         this.items = res.data;
         console.log(this.items.data[0].priceUsd)
       })
-    ,10000)
+    ,15000)
   }
 }
 </script>
